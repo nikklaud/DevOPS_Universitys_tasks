@@ -7,5 +7,5 @@ RUN apt-get update && \
 
 COPY main.py /home/main.py
 
-CMD "./main.py"
+CMD "main.py"
 

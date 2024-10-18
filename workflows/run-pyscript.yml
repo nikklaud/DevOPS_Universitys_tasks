@@ -1,0 +1,19 @@
+name: Run Python Script
+
+on: [push]
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checout repository
+      uses: action/checkout@v3
+
+    - name: Set up Python
+      uses: action/setup-python@v3
+      with:
+        python-version: '3.12.6'
+
+    - name: Run Python Script
+      run: python script.py

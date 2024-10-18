@@ -16,4 +16,4 @@ jobs:
         python-version: '3.12.6'
 
     - name: Run Python Script
-      run: python script.py
+      run: python hw3/script.py

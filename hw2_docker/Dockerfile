@@ -1,11 +1,11 @@
-FROM ubuntu:22.04
+FROM python:3.9-slim
 
-RUN echo "Первый образ докера в моей жизни"
+WORKDIR /app
 
-RUN apt-get update && \
-    apt-get install -y python3
+COPY requirements.txt /app/
 
-COPY main.py /home/main.py
+RUN pip install -r requirements.txt
 
-CMD ["python3", "/home/main.py"]
+COPY . /app/
 
+CMD ["python", "main.py"]
